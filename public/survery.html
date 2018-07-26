@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<header>
+    <h2>Survery Questions</h2>
+</header>
+<hr>
+<input id="name" type="text" class="validate" required>
+                <label class='active' for="name">Name (required)</label>
+                <br>
+                <input id="photo" type="text" class="validate" required>
+                <label class='active' for="name">Link to Photo Image (required)</label>
+<hr>
+
+<body>
+    <div class="container">
+        <form>
+            <h5>Question 1</h5>
+            <h6>Do you ever do anything without planning it our first?</h6>
+            <div class="form-group">
+                <select class="form-control" class="browser" id="q1">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 2</h5>
+            <h6>Your Mind is always buzzing with unexplored iddeas and plans?</h6>
+            <div class="form-group">
+
+                <select class="form-control" class="browser" id="q2">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 3</h5>
+            <h6>You rarely get upset with people?</h6>
+            <div class="form-group">
+                <select class="form-control" class="browser" id="q3">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 4</h5>
+            <h6>You rarely get carried away by fantasies and ideads?</h6>
+            <div class="form-group">
+
+                <select class="form-control" class="browser" id="q4">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 5</h5>
+            <h6>You feel more energetic after spending time with a group of people?</h6>
+            <div class="form-group">
+                <select class="form-control" class="browser" id="q5">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 6</h5>
+            <h6>You find it difficult to relate to other people's feelings?</h6>
+            <div class="form-group">
+
+                <select class="form-control" class="browser" id="q6">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 7</h5>
+            <h6>Do you consider yourself adventurish?</h6>
+            <div class="form-group">
+                <select class="form-control" class="browser" id="q7">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 8</h5>
+            <h6>You find it easy to stay relaxed when in a pressured situtation?</h6>
+            <div class="form-group">
+
+                <select class="form-control" class="browser" id="q8">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 9</h5>
+            <h6>You enjoy trying new things?</h6>
+            <div class="form-group">
+                <select class="form-control" class="browser" id="q9">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+            <h5>Question 10</h5>
+            <h6>Do you find it easier to go out group dates for a first date?</h6>
+            <div class="form-group">
+
+                <select class="form-control" class="browser" id="q10">
+                    <option>1(Strongly Disagree)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5(Strongly Agree)</option>
+                </select>
+            </div>
+    </div>
+    <div class="text-center">
+        <a href="#">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+                <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+            </button>
+        </a>
+    </div>
+    </form>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="#">API Routes</a> |
+                <a href="#">HTML Routes</a>
+            </p>
+        </div>
+    </footer>
+
+
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#submit").on("click", function () {
+        
+                function checkForm() {
+                    var isValid = true;
+                    $('.validate').each(function () {
+                        if ($(this).val() === '') {
+                            isValid = false;
+                        }
+                    });
+                    $('.browser').each(function () {
+                        if ($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    return isValid;
+                }
+               
+                if (checkForm() == true) {
+                
+                    var newFriend = {
+                        name: $('#name').val().trim(),
+                        profilePic: $('#photo').val().trim(),
+                        scores: [
+                            $('#q1').val(),
+                            $('#q2').val(),
+                            $('#q3').val(),
+                            $('#q4').val(),
+                            $('#q5').val(),
+                            $('#q6').val(),
+                            $('#q7').val(),
+                            $('#q8').val(),
+                            $('#q9').val(),
+                            $('#q10').val(),
+                        ]
+                    };
+
+                }
+            });
+        })
+
+    </script>
+</body>
+
+</html>
